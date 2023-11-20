@@ -38,8 +38,8 @@ void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
 	{
 		for (idx = start; idx < start + jump; idx++)
 		{
-			if ((flow == (UP) && array[idx] > array[idx + jump]) ||
-			    (flow == (DOWN) && array[idx] < array[idx + jump]))
+			if ((flow == UP && array[idx] > array[idx + jump]) ||
+			    (flow == DOWN && array[idx] < array[idx + jump]))
 				swap_ints(array + idx, array + idx + jump);
 		}
 		bitonic_merge(array, size, start, jump, flow);
